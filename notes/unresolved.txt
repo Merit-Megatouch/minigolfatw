@@ -2,61 +2,12 @@
 # megatouch-host loads the game with RTLD_NOW, so each of these must be defined
 # (usually in src/host/loader_services.cpp) before the game will start.
 # symbol | needed by
-BonusPlay | minigolfatw.so
-FileExists(char const*) | minigolfatw.so
-GetTouchCoord(int*, int*, int*) | minigolfatw.so
-GetHelpFileName(char (&) [255], char const*, Locale::Languages, char const*) | minigolfatw.so
-MeritthonDisplayRound(int, int, int, unsigned long) | minigolfatw.so
-PlayWave(char*, unsigned short, int, int, int, bool) | minigolfatw.so
+TwDrvFifo_close | libtouchscreen.so
+TwDrvFifo_ioctl | libtouchscreen.so
+TwDrvFifo_open | libtouchscreen.so
+TwDrvFifo_read | libtouchscreen.so
+TwDrvFifo_write | libtouchscreen.so
 KeyManager::GetInstance() | minigolfatw.so
-ScreenInfo::GetInstance() | minigolfatw.so
-TextSystem::LoadTranslations(xml_gameinfo::GameIds) | minigolfatw.so
-TextSystem::GetSpriteChannels(char const*, unsigned char**, unsigned char**, int, int, bool, bool, int, float) | minigolfatw.so
-TextSystem::SetTextDescription(TextDesc const&) | minigolfatw.so
-Translator::nTranslate(char*, unsigned int, char const*) | minigolfatw.so
-WorldClass::WorldClass() | minigolfatw.so
-system_info::SystemInfo::GetInstance() | minigolfatw.so
-system_info::SystemInfo::IsPlatformForce() | minigolfatw.so
-system_info::SystemInfo::IsPlatformGameTime() | minigolfatw.so
-MegacGlobals::SaveScreen() | minigolfatw.so
-MegacGlobals::RestoreScreen() | minigolfatw.so
-CoinJamManager::RegisterCallback(void (*)(bool)) | minigolfatw.so
-CoinJamManager::UnregisterCallback(void (*)(bool)) | minigolfatw.so
-CoinJamManager::Instance() | minigolfatw.so
-ContinueControl::display(unsigned int, unsigned int, unsigned int) | minigolfatw.so
-Books::LogCategoryPlays(xml_gameinfo::GameIds, int, int) | minigolfatw.so
-Books::Instance() | minigolfatw.so
-Colour::black | minigolfatw.so
-Colour::white | minigolfatw.so
-Locale::LanguageManager::IndexOf(Locale::Languages) | minigolfatw.so
-TextDesc::SetFontName(char const*) | minigolfatw.so
-TextUtils::ConvertToMarkup(char const*) | minigolfatw.so
-TextUtils::MeritStringToUTF8(char const*) | minigolfatw.so
 KeyManager::Country() const | minigolfatw.so
 KeyManager::IsNJKey() const | minigolfatw.so
 HighScoresManager::WinnersMask() const | minigolfatw.so
-layout::ScreenControl::GetCurrentWidth() const | minigolfatw.so
-layout::ScreenControl::GetCurrentHeight() const | minigolfatw.so
-vtable for DOSLinuxWorld | minigolfatw.so
-allegro_gl_flip | minigolfatw.so
-blit | minigolfatw.so
-create_bitmap_ex | minigolfatw.so
-destroy_bitmap | minigolfatw.so
-gluCylinder | minigolfatw.so
-gluDeleteQuadric | minigolfatw.so
-gluLookAt | minigolfatw.so
-gluNewQuadric | minigolfatw.so
-gluPerspective | minigolfatw.so
-gluQuadricDrawStyle | minigolfatw.so
-gluQuadricNormals | minigolfatw.so
-gluSphere | minigolfatw.so
-install_int | minigolfatw.so
-masked_blit | minigolfatw.so
-mouse_b | minigolfatw.so
-mouse_x | minigolfatw.so
-mouse_y | minigolfatw.so
-position_mouse | minigolfatw.so
-remove_int | minigolfatw.so
-screen | minigolfatw.so
-voice_check | minigolfatw.so
-voice_ramp_volume | minigolfatw.so
